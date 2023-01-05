@@ -1,0 +1,33 @@
+Vision for test-bank structure:
+
+1. A database of questions; maybe a csv file or files.
+2. Pure latex files with special commands that reference those questions: something like \dbquestion{reference}. This can be defined as a latex command (\newcommand) so that, when ordinary latex is run on the text file, it generates an outline of a given assessment, listing the references to the question database. Then a python script could use this latex file to generate a specific instance of the assessment and feed it into the latex compiler, as well as create a version of it for editing. So the structure of a basic latex file would be the following:
+
+PREAMBLE
+
+%%%including a "mode" setting which tells latex which of the two documents below to create (I think I can do this somehow...). The mode would be set to create the outline by default, but the python script would switch modes to create the specific instances and then run pdflatex and then switch it back. 
+
+\begin{document}
+\begin{questions}
+\question \dbquestion{ref1}
+\question \dbquestion{ref2}
+\question \dbquestion{ref3}
+\end{questions}
+\end{document}
+
+
+%%%This part shows up after the first time the python script is run on the document.
+
+\begin{document}
+\begin{questions}
+\question instance question found in db ref1
+\question instance of question found in db ref2
+\question instance of question found in db ref3
+\end{questions}
+
+
+The hard thing, which I haven't quite worked out, is how to structure the database. I need:
+
+1. My questions to be organized in a logical fashion in such a way that I can view and modify the bank easily.
+2. From latex (as described above) to be able to access a specific, particular question easily. I need a nice way to point to individual questions.
+3. I should also be able to do more complicated things, like choose randomly from a subset of questions, all with a particular theme. The questions should have some sort of tag system. 

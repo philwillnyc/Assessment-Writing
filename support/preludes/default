@@ -1,0 +1,20 @@
+
+\documentclass[addpoints]{exam} 
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{graphicx,setspace,latexsym,mathrsfs,amsfonts,amssymb, amsmath, wasysym, enumitem}
+\usepackage{pictex, pspicture}
+\usepackage{graphicx} 
+\usepackage[export]{adjustbox}
+\usepackage{enumerate}
+\usepackage{hyperref} 
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+\hskip -\arraycolsep
+\let\@ifnextchar\new@ifnextchar
+\array{#1}}
+\makeatother
+\newcommand{\tf}[1][{}]{%
+\fillin[#1][0.25in]%
+}

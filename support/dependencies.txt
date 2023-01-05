@@ -1,0 +1,7 @@
+python packages:
+
+numpy
+sympy
+pylatex
+
+latex installation

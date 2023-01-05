@@ -1,0 +1,22 @@
+*.tex
+*.log
+*.aux
+*.pdf
+*.gz
+*.out
+*.fdb_latexmk
+*.fls
+*.sage
+*.scmd
+*.sout
+__pycache__
+.vscode
+*TEMP*
+*.docx
+Calc
+Calc 2
+Finite Math
+Output
+QR
+Question Sandbox
+tex_files
